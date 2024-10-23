@@ -24,11 +24,12 @@ def main():
         print(f"The file {file_path} does not exist.")
         return
 
+    print(f"Creating audio file `{output_file}`, please wait...")
     output_file = 'output.mp3'
     text = extract_text_from_docx(file_path)
     convert_text_to_audio(text, output_file)
 
-    print(f"Audio saved to {output_file}")
+    print(f"Success! Audio saved to {output_file}")
 
 if __name__ == "__main__":
     main()
